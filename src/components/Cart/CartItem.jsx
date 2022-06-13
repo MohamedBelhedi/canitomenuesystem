@@ -27,6 +27,18 @@ function CartItem({placeholderfun}) {
 
 
 ]
+
+// const CheckOutItem=document.querySelector(".CardTest")
+// const name=document.querySelectorAll(".cost")
+
+// CheckOutItem.addEventListener("click",()=>{
+
+//     name.innerText="Test"
+//     console.log("was geht")
+
+
+// })
+
   return (
     <div>
         {/* vielleicht ein Element mit map( interieren) */}
@@ -34,8 +46,10 @@ function CartItem({placeholderfun}) {
          
          itemIter.map(({name,cost,id})=>{
             <>
-        <h4 key={id}>{(name)}</h4>
-        <h4 key={id}>{(cost)}</h4>
+            {/* {name} */}
+            {/* {cost} */}
+        <h4 className="name" key={id}></h4>
+        <h4 className="cost" key={id}></h4>
         
      
         </>
@@ -52,6 +66,7 @@ function CartItem({placeholderfun}) {
 
         <PayPalScriptProvider options={{ "client-id": "test" }}>
             <PayPalButtons style={{ layout: "horizontal" }} />
+            {/* hier nach dem Bezaheln die Date4n übermittel an Whatapp oder SQL */}
         </PayPalScriptProvider>
 
 

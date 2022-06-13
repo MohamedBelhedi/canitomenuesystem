@@ -35,8 +35,10 @@ const onBtnClick=[{
 
  onClick1(){
   const h4=document.querySelector("h4")
+  const name1=document.querySelector("h5")
     console.log("hallo1")
-    h4.innerText="Adana Spieß gekauft"
+    name1.innerText="Test gekauft"
+    
     // versuchen wir es mit einem addEventListener
 
   },
@@ -63,7 +65,7 @@ const onBtnClick=[{
     <h4></h4>
    {menueTeller.map(({name,image,id,text,btnText})=>(
 
-  <Card key={id} style={{ width: '18rem' }}>
+  <Card className="CardTest" key={id} style={{ width: '18rem' }}>
   <Card.Img variant="top" src={image} />
   <Card.Body>
     <Card.Title>{name}</Card.Title>
@@ -74,7 +76,12 @@ const onBtnClick=[{
   
     </Card.Text>
     {onBtnClick.map(({onClick1,onClick2,onClick3})=>(
-   <Button onClick={async ()=>{
+   <Button onClick={
+    
+    onClick1} variant="primary">{btnText}</Button>))}
+
+{/* die Funktion war in onClick oben */}
+{/* async ()=>{
     await onClick1(onClick1);
     if(onClick1==true&&onClick2,onClick3==false)
     {
@@ -83,7 +90,7 @@ const onBtnClick=[{
     }else{
     return true
     }
-    }} variant="primary">{btnText}</Button>))}
+    } */}
   </Card.Body>
   </Card>
   
