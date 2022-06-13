@@ -37,11 +37,13 @@ const onBtnClick=[{
   const h4=document.querySelector("h4")
     console.log("hallo1")
     h4.innerText="Adana Spieß gekauft"
+    // versuchen wir es mit einem addEventListener
 
   },
  onClick2(){
 
     console.log("hallo2")
+
 
   },
  onClick3(){

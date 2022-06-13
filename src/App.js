@@ -5,9 +5,13 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 
 import './App.css';
+import Suppen from './components/Buttons/ButtoSuppen';
 import Getränke from './components/Getränke';
+import Navbarleiste from './components/Navbar/Navbarleiste';
 import Page from './components/Page';
 import TellerGerichte from './components/TellerGerichte';
+
+
 
 
 class App extends Component {
@@ -25,15 +29,20 @@ class App extends Component {
   }
   render(){
   return (
+    <>
+<Navbarleiste/>
     
   
     <div className="App">
+
+
     <Router>
     
     <Routes>
     <Route path={process.env.PUBLIC_URL +"/"} element={<Page/>} exact/>
     <Route path={"/drinks"} element={<Getränke/>}/>
     <Route path={"/tellergerichte"} element={<TellerGerichte/>}/>
+    <Route path={"/suppen"} element={<Suppen/>}/>
     
    
     </Routes>
@@ -44,7 +53,7 @@ class App extends Component {
   
    
     </div>
-
+    </>
   );
 }
 }

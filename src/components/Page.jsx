@@ -19,6 +19,12 @@ class Page extends Component {
     Grill=()=>{
         window.location.assign("/drinks")
     }
+
+    Suppen=()=>{
+
+      window.location.assign("/suppen")
+
+    }
     render(){
         const urlImag=[
         "https://images.pexels.com/photos/3220617/pexels-photo-3220617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -52,7 +58,7 @@ class Page extends Component {
     </Card.Title>
         <Card.Text>
      
-   <Button onClick={this.getränke1} variant="primary" >Kaufen</Button>
+   <Button onClick={this.Suppen} variant="primary" >Kaufen</Button>
   
     </Card.Text>
    
@@ -65,7 +71,7 @@ class Page extends Component {
     </Card.Title>
         <Card.Text>
      
-   <Button onClick={this.getränke1} variant="primary" >Kaufen</Button>
+   <Button  variant="primary" >Kaufen</Button>
   
     </Card.Text>
    
