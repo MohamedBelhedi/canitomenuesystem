@@ -56,8 +56,10 @@ const onBtnClick=[{
 
 }]
   return (
-    <div>
+    <>
     <h1>Teller und Grilll Gerichte</h1>
+    <div className="App">
+    
     <h4></h4>
    {menueTeller.map(({name,image,id,text,btnText})=>(
 
@@ -93,6 +95,7 @@ const onBtnClick=[{
 
 
     </div>
+    </>
   )
 }
 

@@ -5,10 +5,10 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 
 import './App.css';
-import Suppen from './components/Buttons/ButtoSuppen';
 import Getränke from './components/Getränke';
 import Navbarleiste from './components/Navbar/Navbarleiste';
 import Page from './components/Page';
+import Suppen from './components/Suppen';
 import TellerGerichte from './components/TellerGerichte';
 
 

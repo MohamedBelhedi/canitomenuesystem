@@ -3,10 +3,10 @@ import { Button } from 'react-bootstrap';
 
 
 
-function Suppen({onSpBst}) {
+function SuppenBTn({onSpBst}) {
     return (
    <Button variant="primary" onClick={onSpBst}>bestellen</Button>
     )
   }
 
-  export default Suppen;
+  export default SuppenBTn;

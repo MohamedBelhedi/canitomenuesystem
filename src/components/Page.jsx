@@ -1,4 +1,4 @@
-import { Button,Card} from 'react-bootstrap'
+import {Button,Card} from 'react-bootstrap'
 import React,{Component} from 'react'
 import '../App.css'
 import ButtonGrill from './Buttons/ButtonGrill'
@@ -68,13 +68,14 @@ class Page extends Component {
    <Card.Img variant="top" src={urlImag[2]} />
   <Card.Body>     
     <Card.Title>
+      Döner
     </Card.Title>
         <Card.Text>
      
    <Button  variant="primary" >Kaufen</Button>
   
     </Card.Text>
-   
+    
    </Card.Body>
    </Card>
     </div>
