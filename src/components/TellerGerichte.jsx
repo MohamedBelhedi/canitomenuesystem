@@ -34,10 +34,16 @@ function TellerGerichte() {
 const onBtnClick=[{
 
  onClick1(){
-  const h4=document.querySelector("h4")
+
   const name1=document.querySelector("h5")
     console.log("hallo1")
-    name1.innerText="Test gekauft"
+    name1.innerText="Adanaspieß:"+" "+2
+    const CheckOutItem=document.querySelector("h6")
+    
+    
+    const Summe=name1.textContent
+    CheckOutItem.innerText=Summe
+    console.log("Bezahlen")
     
     // versuchen wir es mit einem addEventListener
 
@@ -57,6 +63,8 @@ const onBtnClick=[{
 
 
 }]
+
+
   return (
     <>
     <h1>Teller und Grilll Gerichte</h1>

@@ -1,5 +1,7 @@
 import React from 'react'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import Swal from 'sweetalert2';
+
 // palceholderfunc für die Items die der Kunde auswählt
 function CartItem({placeholderfun}) {
     const itemIter=[
@@ -28,19 +30,31 @@ function CartItem({placeholderfun}) {
 
 ]
 
-// const CheckOutItem=document.querySelector(".CardTest")
-// const name=document.querySelectorAll(".cost")
+const bezahlen=(async()=>{    
+    
+    
+    const text=document.querySelector("h6").textContent
 
-// CheckOutItem.addEventListener("click",()=>{
+await Swal.fire({
+    title: 'Nach oder vor dem Paypal bezahlen bitte wir dich deine Bestellung an uns über Whatsapp Support abzuschicken',
+    text: 'Nicht Vergessen Danke ',
 
-//     name.innerText="Test"
-//     console.log("was geht")
 
 
-// })
+})
+window.open("https://api.whatsapp.com/send/?phone=1111111111&text="+`${text}`)
+
+})
+
+
+
+
+
 
   return (
     <div>
+
+        {}
         {/* vielleicht ein Element mit map( interieren) */}
         {
          
@@ -58,19 +72,20 @@ function CartItem({placeholderfun}) {
        
 
     <hr />    
-
-    <h4 className="Summe">Summe Total</h4>
-    <h5>
+    
+    <h4>Summe Total:   <h6 className="Summe"></h6> </h4>
+  
+    <h7>
         
         Bezahlen
 
-        <PayPalScriptProvider options={{ "client-id": "test" }}>
-            <PayPalButtons style={{ layout: "horizontal" }} />
+        <PayPalScriptProvider  options={{ "client-id": "test" }}>
+            <PayPalButtons onClick={bezahlen} style={{ layout: "horizontal" }} />
             {/* hier nach dem Bezaheln die Date4n übermittel an Whatapp oder SQL */}
         </PayPalScriptProvider>
 
 
-    </h5>
+    </h7>
 
 
     </div>
