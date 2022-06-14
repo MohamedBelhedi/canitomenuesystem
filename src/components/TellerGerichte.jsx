@@ -9,7 +9,8 @@ function TellerGerichte() {
     image:"https://images.pexels.com/photos/7439809/pexels-photo-7439809.jpeg?cs=srgb&dl=pexels-furkan-tumer-7439809.jpg&fm=jpg",
     name:"Adana Spieß",
     text:"besteht aus Reihnem RinderHack, und orientalisch gewürzt",
-    btnText:"Adana Spieß"
+    btnText:"Adana Spieß",
+    kosten:"13.00 €"
 
   },
     {
@@ -17,7 +18,8 @@ function TellerGerichte() {
     image:"https://images.pexels.com/photos/7439808/pexels-photo-7439808.jpeg?cs=srgb&dl=pexels-furkan-tumer-7439808.jpg&fm=jpg",
     name:"IskenderKebab",
     text:"Kebab Fleisch vermischt mit Joghut Soße, und einer Tomaten Soße und mit Salat und orientalischen Gewürzen",
-    btnText:"iskander Kebab"
+    btnText:"iskander Kebab",
+    
 
   },
     {
@@ -71,7 +73,7 @@ const onBtnClick=[{
     <div className="App">
     
     <h4></h4>
-   {menueTeller.map(({name,image,id,text,btnText})=>(
+   {menueTeller.map(({name,image,id,text,btnText,kosten})=>(
 
   <Card className="CardTest" key={id} style={{ width: '18rem' }}>
   <Card.Img variant="top" src={image} />
@@ -83,6 +85,7 @@ const onBtnClick=[{
    
   
     </Card.Text>
+    <h7 className="cost">{kosten}</h7>
     {onBtnClick.map(({onClick1,onClick2,onClick3})=>(
    <Button onClick={
     

@@ -8,21 +8,21 @@ function CartItem({placeholderfun}) {
         {
         id:1,
         name:'Item1',
-        cost:'',
+        cost:'12.00€',
 
 
     },
         {
         id:2,
         name:'Item2',
-        cost:'',
+        cost:'10.00€',
 
 
     },
         {
         id:3,
         name:'Item3',
-        cost:'',
+        cost:'13.00€',
 
 
     },
@@ -30,10 +30,20 @@ function CartItem({placeholderfun}) {
 
 ]
 
+// sicherheitsCode
+// const Total=()=>{
+
+//     const Summe=document.querySelector(".Summe")
+//     const name1=document.querySelector("h5")
+//     return Summe=name1.textContent
+
+// }
 const bezahlen=(async()=>{    
     
+    const name1=document.querySelector("h5").textContent
     
-    const text=document.querySelector("h6").textContent
+    const text=document.querySelector(".cost").textContent+name1
+    
 
 await Swal.fire({
     title: 'Nach oder vor dem Paypal bezahlen bitte wir dich deine Bestellung an uns über Whatsapp Support abzuschicken',
@@ -62,9 +72,9 @@ window.open("https://api.whatsapp.com/send/?phone=1111111111&text="+`${text}`)
             <>
             {/* {name} */}
             {/* {cost} */}
-        <h4 className="name" key={id}></h4>
-        <h4 className="cost" key={id}></h4>
+       
         
+
      
         </>
 
@@ -73,8 +83,7 @@ window.open("https://api.whatsapp.com/send/?phone=1111111111&text="+`${text}`)
 
     <hr />    
     
-    <h4>Summe Total:   <h6 className="Summe"></h6> </h4>
-  
+    <h4>Summe Total:   <h6 className="Summe" ></h6> </h4>
     <h7>
         
         Bezahlen
