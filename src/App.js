@@ -5,6 +5,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 
 import './App.css';
+import Footer from './components/Footer/Footer';
 import Getränke from './components/Getränke';
 import Navbarleiste from './components/Navbar/Navbarleiste';
 import Page from './components/Page';
@@ -14,11 +15,28 @@ import TellerGerichte from './components/TellerGerichte';
 
 
 
+
 class App extends Component {
   constructor(props){
     super(props)
   }
 
+DatenSchutz=()=>{
+
+window.location.assign("/datenschutz")
+
+}
+
+Impressum=()=>{
+
+window.location.assign("/impressum")
+
+}
+Kontakt=()=>{
+
+window.location.assign("/kontakt")
+
+}
 
   getränke1=()=>{
 
@@ -28,6 +46,24 @@ class App extends Component {
 
   }
   render(){
+    const DatenSchutz=()=>{
+      return(<h1>Datenschutz</h1>)
+     
+  
+  
+     }
+    const Impressum=()=>{
+      return(<h1>Impressum</h1>)
+     
+  
+  
+     }
+    const Kontakt=()=>{
+      return(<h1>Kontakt</h1>)
+     
+  
+  
+     }
   return (
     <>
 <Navbarleiste/>
@@ -43,6 +79,9 @@ class App extends Component {
     <Route path={"/drinks"} element={<Getränke/>}/>
     <Route path={"/tellergerichte"} element={<TellerGerichte/>}/>
     <Route path={"/suppen"} element={<Suppen/>}/>
+    <Route path={"/datenschutz"} element={<DatenSchutz/>}/>
+    <Route path={"/impressum"} element={<Impressum/>}/>
+    <Route path={"/kontakt"} element={<Kontakt/>}/>
     
    
     </Routes>
@@ -50,7 +89,11 @@ class App extends Component {
 
     
 
-  
+
+  <Footer 
+  DatenSchutz={this.DatenSchutz} 
+  Impressum={this.Impressum} 
+  Kontakt={this.Kontakt}/>
    
     </div>
     </>

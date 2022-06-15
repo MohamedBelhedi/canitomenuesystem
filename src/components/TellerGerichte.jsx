@@ -10,7 +10,7 @@ function TellerGerichte() {
     name:"Adana Spieß",
     text:"besteht aus Reihnem RinderHack, und orientalisch gewürzt",
     btnText:"Adana Spieß",
-    kosten:"13.00 €"
+    kosten:13.00
 
   },
     {
@@ -34,8 +34,9 @@ function TellerGerichte() {
 ]
 
 const onBtnClick=[{
+  
+ onClick1({kosten}){
 
- onClick1(){
 
   const name1=document.querySelector("h5")
     console.log("hallo1")

@@ -3,32 +3,8 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Swal from 'sweetalert2';
 
 // palceholderfunc für die Items die der Kunde auswählt
-function CartItem({placeholderfun}) {
-    const itemIter=[
-        {
-        id:1,
-        name:'Item1',
-        cost:'12.00€',
+function CartItem() {
 
-
-    },
-        {
-        id:2,
-        name:'Item2',
-        cost:'10.00€',
-
-
-    },
-        {
-        id:3,
-        name:'Item3',
-        cost:'13.00€',
-
-
-    },
-
-
-]
 
 // sicherheitsCode
 // const Total=()=>{
@@ -64,26 +40,12 @@ window.open("https://api.whatsapp.com/send/?phone=1111111111&text="+`${text}`)
   return (
     <div>
 
-        {}
-        {/* vielleicht ein Element mit map( interieren) */}
-        {
-         
-         itemIter.map(({name,cost,id})=>{
-            <>
-            {/* {name} */}
-            {/* {cost} */}
-       
-        
-
      
-        </>
-
-         })}
        
 
     <hr />    
     
-    <h4>Summe Total:   <h6 className="Summe" ></h6> </h4>
+    <h4>Summe Total:   <h6 className="Summe" ></h6> € </h4>
     <h7>
         
         Bezahlen
