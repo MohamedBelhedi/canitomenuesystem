@@ -45,6 +45,7 @@ window.location.assign("/kontakt")
 
 
   }
+  // man kann einzelne Seiten erstellen und dann über functions ansteuern oder man sowas hier machen siehe unten
   render(){
     const DatenSchutz=()=>{
       return(<h1>Datenschutz</h1>)
@@ -90,12 +91,13 @@ window.location.assign("/kontakt")
     
 
 
-  <Footer 
+
+   
+    </div>
+    <Footer 
   DatenSchutz={this.DatenSchutz} 
   Impressum={this.Impressum} 
   Kontakt={this.Kontakt}/>
-   
-    </div>
     </>
   );
 }
