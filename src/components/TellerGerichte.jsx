@@ -3,7 +3,7 @@ import {Card,Button} from 'react-bootstrap'
 
 function TellerGerichte() {
 
-  const menueTeller=[
+  var menueTeller=[
     {
       id:1,
     image:"https://images.pexels.com/photos/7439809/pexels-photo-7439809.jpeg?cs=srgb&dl=pexels-furkan-tumer-7439809.jpg&fm=jpg",
@@ -19,6 +19,7 @@ function TellerGerichte() {
     name:"IskenderKebab",
     text:"Kebab Fleisch vermischt mit Joghut Soße, und einer Tomaten Soße und mit Salat und orientalischen Gewürzen",
     btnText:"iskander Kebab",
+    kosten:14.00
     
 
   },
@@ -27,7 +28,8 @@ function TellerGerichte() {
     image:"https://images.pexels.com/photos/3220617/pexels-photo-3220617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     name:"Chili Cheese Döner",
     text:"Wie der klassische Döner Teller, mit einer der besten Soßen Chilli Cheese",
-    btnText:"Chili Cheese"
+    btnText:"Chili Cheese",
+    kosten:15.00
 
   },
 
@@ -35,37 +37,67 @@ function TellerGerichte() {
 
 const onBtnClick=[{
   
- onClick1({kosten}){
+ onClick1(e){
 
+  // versuch hier menueTeller die kosten hier auf zurufen
+
+
+
+
+  
 
   const name1=document.querySelector("h5")
     console.log("hallo1")
-    name1.innerText="Adanaspieß:"+" "+2
+    name1.innerText="Adanaspieß"
     const CheckOutItem=document.querySelector("h6")
+    const val=e.target.value
     
     
-    const Summe=name1.textContent
-    CheckOutItem.innerText=Summe
-    console.log("Bezahlen")
+   
+    CheckOutItem.innerText=val
+    console.log(e.target.value)
     
     // versuchen wir es mit einem addEventListener
 
   },
- onClick2(){
+ onClick2(e){
 
+
+  const name2=document.querySelector("h5")
     console.log("hallo2")
-
+    name2.innerText="Kebab1"
+    const CheckOutItem=document.querySelector("h6")
+    const val=e.target.value
+    
+    
+   
+    CheckOutItem.innerText=val
+    console.log(e.target.value)
+    
+    // versuchen wir es mit einem addEventListener
 
   },
- onClick3(){
+ onClick3(e){
 
+
+  const name3=document.querySelector("h5")
     console.log("hallo3")
+    
+    const CheckOutItem=document.querySelector("h6")
+    const val=e.target.value
+    name3.innerText="Kebab3"
+    
+    
+   
+    CheckOutItem.innerText=val
+    console.log(e.target.value)
+    
+    // versuchen wir es mit einem addEventListener
 
-  }
+  },
 
 
-
-}]
+  }]
 
 
   return (
@@ -86,12 +118,10 @@ const onBtnClick=[{
    
   
     </Card.Text>
-    <h7 className="cost">{kosten}</h7>
-    {onBtnClick.map(({onClick1,onClick2,onClick3})=>(
-   <Button onClick={
     
-    onClick1} variant="primary">{btnText}</Button>))}
-
+    {onBtnClick.map(({onClick1,onClick2,onClick3})=>(
+   <Button onClick={(onClick1,onClick2,onClick3)} variant="primary" value={kosten}>{btnText}</Button>))}
+<h7 className="cost">{kosten}€</h7>
 {/* die Funktion war in onClick oben */}
 {/* async ()=>{
     await onClick1(onClick1);

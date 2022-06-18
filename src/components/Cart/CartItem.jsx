@@ -3,7 +3,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Swal from 'sweetalert2';
 
 // palceholderfunc für die Items die der Kunde auswählt
-function CartItem() {
+function CartItem({placeholderfun}) {
 
 
 // sicherheitsCode
@@ -19,6 +19,12 @@ const bezahlen=(async()=>{
     const name1=document.querySelector("h5").textContent
     
     const text=document.querySelector(".cost").textContent+name1
+
+    const summeTestMathe=Number(document.querySelector("h6").textContent)
+    const random=11
+    const summeTestAll=summeTestMathe+random
+    console.log(summeTestAll)
+    console.log(1+6)
     
 
 await Swal.fire({
