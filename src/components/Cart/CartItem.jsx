@@ -18,7 +18,7 @@ const bezahlen=(async()=>{
     
     const name1=document.querySelector("h5").textContent
     
-    const text=document.querySelector(".cost").textContent+name1
+    const text="Gesamtsumme:"+document.querySelector("h6").textContent+" € "+" Bestellung: "+name1
 
     const summeTestMathe=Number(document.querySelector("h6").textContent)
     const random=11
@@ -51,7 +51,7 @@ window.open("https://api.whatsapp.com/send/?phone=1111111111&text="+`${text}`)
 
     <hr />    
     
-    <h4>Summe Total:   <h6 className="Summe" ></h6> € </h4>
+    <h4>Summe Total:   <h6 className="Summe" > </h6> € </h4>
     <h7>
         
         Bezahlen

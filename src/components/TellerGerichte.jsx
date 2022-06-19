@@ -34,7 +34,24 @@ function TellerGerichte() {
   },
 
 ]
+const warenKorb=()=>{
 
+
+   const warenTest=document.querySelectorAll("h5").textContent
+  const warenTestKorb=document.querySelector(".test")
+ 
+if(warenTest){
+    warenTestKorb.style.background=""
+    console.log("halloWare")
+}else{
+  warenTestKorb.style.background="red"
+  
+}
+
+
+
+
+}
 const onBtnClick=[{
   
  onClick1(e){
@@ -48,7 +65,7 @@ const onBtnClick=[{
 
   const name1=document.querySelector("h5")
     console.log("hallo1")
-    name1.innerText="Adanaspieß"
+    name1.innerText=menueTeller[0].name
     const CheckOutItem=document.querySelector("h6")
     const val=e.target.value
     
@@ -65,7 +82,7 @@ const onBtnClick=[{
 
   const name2=document.querySelector("h5")
     console.log("hallo2")
-    name2.innerText="Kebab1"
+    name2.innerText=menueTeller[1].name
     const CheckOutItem=document.querySelector("h6")
     const val=e.target.value
     
@@ -74,7 +91,7 @@ const onBtnClick=[{
     CheckOutItem.innerText=val
     console.log(e.target.value)
     
-    // versuchen wir es mit einem addEventListener
+  
 
   },
  onClick3(e){
@@ -85,7 +102,7 @@ const onBtnClick=[{
     
     const CheckOutItem=document.querySelector("h6")
     const val=e.target.value
-    name3.innerText="Kebab3"
+    name3.innerText=menueTeller[2].name
     
     
    
@@ -106,9 +123,9 @@ const onBtnClick=[{
     <div className="App">
     
     <h4></h4>
-   {menueTeller.map(({name,image,id,text,btnText,kosten})=>(
+   {menueTeller.map(({name,image,id,text,kosten})=>(
 
-  <Card className="CardTest" key={id} style={{ width: '18rem' }}>
+  <Card onClick={warenKorb} className="CardTest" key={id} style={{ width: '18rem' }}>
   <Card.Img variant="top" src={image} />
   <Card.Body>
     <Card.Title>{name}</Card.Title>
@@ -120,7 +137,73 @@ const onBtnClick=[{
     </Card.Text>
     
     {onBtnClick.map(({onClick1,onClick2,onClick3})=>(
-   <Button onClick={(onClick1,onClick2,onClick3)} variant="primary" value={kosten}>{btnText}</Button>))}
+   <Button onClick={(
+    onClick1=onClick1=(e)=>{
+
+      // versuch hier menueTeller die kosten hier auf zurufen
+    
+    
+    
+    
+      
+    
+      const name1=document.querySelector("h5")
+        console.log("hallo1")
+        name1.innerText=menueTeller[0].name
+        const CheckOutItem=document.querySelector("h6")
+        const val=e.target.value
+        
+        
+       
+        CheckOutItem.innerText=val
+        console.log(e.target.value)
+        
+        // versuchen wir es mit einem addEventListener
+    
+      
+     onClick2=onClick2=(e)=>{
+
+
+        const name2=document.querySelector("h5")
+          console.log("hallo2")
+          name2.innerText=menueTeller[1].name
+          const CheckOutItem=document.querySelector("h6")
+          const val=e.target.value
+          
+          
+         
+          CheckOutItem.innerText=val
+          console.log(e.target.value)}
+          
+        
+      
+        
+      onClick3=onClick3=(e)=>{
+      
+      
+        const name3=document.querySelector("h5")
+          console.log("hallo3")
+          
+          const CheckOutItem=document.querySelector("h6")
+          const val=e.target.value
+          name3.innerText=menueTeller[2].name
+          
+          
+         
+          CheckOutItem.innerText=val
+          console.log(e.target.value)
+          
+          // versuchen wir es mit einem addEventListener
+      
+     }
+      
+    
+}
+
+
+// warenKorb
+
+)} variant="primary" value={kosten}>{"Kaufen".toUpperCase()}</Button>))}
 <h7 className="cost">{kosten}€</h7>
 {/* die Funktion war in onClick oben */}
 {/* async ()=>{
