@@ -6,10 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 
+function alarm(){
+
+  Swal.fire({
+
+    title: 'Achtung'+'❌',
+    text: 'Diese Seite ist im Aufbau und dient zu Testzwecken,bitte keine Daten Passwörter oder Sensible Daten eigeben Danke'+'😊',
+    timer: 10000
+
+  })
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App  onChange={alarm()} />
   </React.StrictMode>
 );
 

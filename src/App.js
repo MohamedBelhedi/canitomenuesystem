@@ -4,6 +4,8 @@ import { Card,Button } from 'react-bootstrap';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 
+
+
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Getränke from './components/Getränke';
@@ -45,6 +47,10 @@ window.location.assign("/kontakt")
 
 
   }
+
+
+
+  
   // man kann einzelne Seiten erstellen und dann über functions ansteuern oder man sowas hier machen siehe unten
   render(){
     const DatenSchutz=()=>{
@@ -67,10 +73,10 @@ window.location.assign("/kontakt")
      }
   return (
     <>
-<Navbarleiste/>
+<Navbarleiste />
     
   
-    <div className="App">
+    <div className="App" >
 
 
     <Router>
