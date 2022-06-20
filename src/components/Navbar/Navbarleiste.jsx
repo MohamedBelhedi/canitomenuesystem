@@ -36,6 +36,7 @@ const rmvClick=()=>{
 
 
   return (
+<>
     <Navbar bg="light" expand="lg">
     <Container>
       <Navbar.Brand href="/"><img src={logo} width="50" height="50"/></Navbar.Brand>
@@ -52,9 +53,11 @@ const rmvClick=()=>{
 </svg>
 {/* hier die einkäufe brechenen und die Values an Paypal übermitteln und Datenbank oder Whatsapp */}
 {/* viele h5 erstellen die die Bestellung aufnehmen und zusammen grechenet werde */}
-<h5 className="item1" onChange={onBtnClick} ></h5><span className="btnRmv" onClick={rmvClick}>{"warenkorb löschen".toLocaleUpperCase()}</span>
-<h5 className="item2" onChange={onBtnClick} ></h5>
-<h5 className="item3" onChange={onBtnClick}></h5>
+<span className="btnRmv" onClick={rmvClick}>{"warenkorb löschen".toLocaleUpperCase()}</span>
+<hr />
+<h5 className="item1" ></h5>
+<h5 className="item2"  ></h5>
+<h5 className="item3" ></h5>
 {/* <h5 className="name"></h5> */}
             <CartItem />
 
@@ -67,6 +70,7 @@ const rmvClick=()=>{
       </Navbar.Collapse>
     </Container>
   </Navbar>
+  </>
   )
 }
 

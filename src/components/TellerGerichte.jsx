@@ -51,70 +51,72 @@ if(warenTest){
 
 
 
+
 }
-const onBtnClick=[{
+// ähnlich wie useState Hook
+const onBtnClick=[{}]
   
- onClick1(e){
+//  onClick1(e){
 
-  // versuch hier menueTeller die kosten hier auf zurufen
+//   // versuch hier menueTeller die kosten hier auf zurufen
 
 
 
 
   
 
-  const name1=document.querySelector("h5")
-    console.log("hallo1")
-    name1.innerText=menueTeller[0].name
-    const CheckOutItem=document.querySelector("h6")
-    const val=e.target.value
+//   const name1=document.querySelector("h5")
+//     console.log("hallo1")
+//     name1.innerText=menueTeller[0].name
+//     const CheckOutItem=document.querySelector("h6")
+//     const val=e.target.value
     
     
    
-    CheckOutItem.innerText=val
-    console.log(e.target.value)
+//     CheckOutItem.innerText=val
+//     console.log(e.target.value)
     
-    // versuchen wir es mit einem addEventListener
+//     // versuchen wir es mit einem addEventListener
 
-  },
- onClick2(e){
+//   },
+//  onClick2(e){
 
 
-  const name2=document.querySelector("h5")
-    console.log("hallo2")
-    name2.innerText=menueTeller[1].name
-    const CheckOutItem=document.querySelector("h6")
-    const val=e.target.value
+//   const name2=document.querySelector("h5")
+//     console.log("hallo2")
+//     name2.innerText=menueTeller[1].name
+//     const CheckOutItem=document.querySelector("h6")
+//     const val=e.target.value
     
     
    
-    CheckOutItem.innerText=val
-    console.log(e.target.value)
+//     CheckOutItem.innerText=val
+//     console.log(e.target.value)
     
   
 
-  },
- onClick3(e){
+//   },
+//  onClick3(e){
 
 
-  const name3=document.querySelector("h5")
-    console.log("hallo3")
+//   const name3=document.querySelector("h5")
+//     console.log("hallo3")
     
-    const CheckOutItem=document.querySelector("h6")
-    const val=e.target.value
-    name3.innerText=menueTeller[2].name
+//     const CheckOutItem=document.querySelector("h6")
+//     const val=e.target.value
+//     name3.innerText=menueTeller[2].name
     
     
    
-    CheckOutItem.innerText=val
-    console.log(e.target.value)
+//     CheckOutItem.innerText=val
+//     console.log(e.target.value)
     
-    // versuchen wir es mit einem addEventListener
+//     // versuchen wir es mit einem addEventListener
 
-  },
+//   },
 
 
-  }]
+ 
 
 
   return (
@@ -136,43 +138,54 @@ const onBtnClick=[{
   
     </Card.Text>
     
-    {onBtnClick.map(({onClick1,onClick2,onClick3})=>(
+    {onBtnClick.map((onClick1,onClick2,onClick3)=>(
    <Button onClick={(
     onClick1=onClick1=(e)=>{
-
+  e.preventDefault()
       // versuch hier menueTeller die kosten hier auf zurufen
     
     
     
     
       
-    
+      const item1=document.querySelector(".item1")
       const name1=document.querySelector("h5")
         console.log("hallo1")
-        name1.innerText=menueTeller[0].name
+       
         const CheckOutItem=document.querySelector("h6")
+        // gesamtbestellung aller Produkte
+        const item1_ext=document.querySelector(".item1_ext")
         const val=e.target.value
         
         
        
         CheckOutItem.innerText=val
+        item1_ext.innerText=val
+       const name1_ex= name1.innerText=val+"€ "+" Adana Spieß"
+        item1.innerHTML=name1_ex
         console.log(e.target.value)
         
         // versuchen wir es mit einem addEventListener
     
       
      onClick2=onClick2=(e)=>{
+      e.preventDefault()
 
-
+       const item2=document.querySelector(".item2")
         const name2=document.querySelector("h5")
           console.log("hallo2")
           name2.innerText=menueTeller[1].name
           const CheckOutItem=document.querySelector("h6")
+          // gesamtbestellung aller Produkte
+          const item2_ext=document.querySelector(".item2_ext")
           const val=e.target.value
           
           
          
           CheckOutItem.innerText=val
+          item2_ext.innerText=val
+       const name2_ex= name1.innerText=val+"€ "+" Iskander Kebab"
+        item2.innerHTML=name2_ex
           console.log(e.target.value)}
           
         
@@ -180,6 +193,7 @@ const onBtnClick=[{
         
       onClick3=onClick3=(e)=>{
       
+        const item2=document.querySelector(".item3")
       
         const name3=document.querySelector("h5")
           console.log("hallo3")

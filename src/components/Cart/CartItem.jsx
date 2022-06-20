@@ -15,11 +15,12 @@ function CartItem({placeholderfun}) {
 
 // }
 const bezahlen=(async()=>{    
-    
+   //#region für Whatsapp 
     const name1=document.querySelector("h5").textContent
     
     const text="Gesamtsumme:"+document.querySelector("h6").textContent+" € "+" Bestellung: "+name1
-
+//#endregion
+//berechnung der Gesamtsumme
     const summeTestMathe=Number(document.querySelector("h6").textContent)
     const random=11
     const summeTestAll=summeTestMathe+random
@@ -50,8 +51,10 @@ window.open("https://api.whatsapp.com/send/?phone=1111111111&text="+`${text}`)
        
 
     <hr />    
-    
+    <h6 className="item1_ext" > </h6>
+    <h1 className="item2_ext" > </h1>
     <h4>Summe Total:   <h6 className="Summe" > </h6> € </h4>
+    
     <h7>
         
         Bezahlen
