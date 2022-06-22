@@ -16,16 +16,30 @@ function CartItem({placeholderfun}) {
 // }
 const bezahlen=(async()=>{    
    //#region für Whatsapp 
-    const name1=document.querySelector("h5").textContent
+    const name1=document.querySelector(".item1").textContent
+    const name2=document.querySelector(".item2").textContent
+    const name3=document.querySelector(".item3").textContent
     
-    const text="Gesamtsumme:"+document.querySelector("h6").textContent+" € "+" Bestellung: "+name1
+    const text="Gesamtsumme:"+document.querySelector("h6").textContent+" € "+" Bestellung: "+name1+name2+name3
 //#endregion
 //berechnung der Gesamtsumme
-    const summeTestMathe=Number(document.querySelector("h6").textContent)
-    const random=11
-    const summeTestAll=summeTestMathe+random
-    console.log(summeTestAll)
-    console.log(1+6)
+
+const summeItem1=document.querySelectorAll("item1_ext").textContent
+ const SummeItem2=document.querySelector(".item2_ext").textContent
+ const summeItem3=document.querySelector(".item3_ext").textContent
+
+
+ const h6_ext_test=document.querySelector(".Summe")
+
+ h6_ext_test.innerHTML=summeItem1+SummeItem2+summeItem3
+
+
+console.log(summeItem1+SummeItem2+summeItem3)
+    // const summeTestMathe=Number(document.querySelector("h6").textContent)
+    // const random=11
+    // const summeTestAll=summeTestMathe+random
+    // console.log(summeTestAll)
+    // console.log(1+6)
     
 
 await Swal.fire({
@@ -52,7 +66,8 @@ window.open("https://api.whatsapp.com/send/?phone=1111111111&text="+`${text}`)
 
     <hr />    
     <h6 className="item1_ext" > </h6>
-    <h1 className="item2_ext" > </h1>
+    <h6 className="item2_ext" > </h6>
+    <h6 className="item3_ext" > </h6>
     <h4>Summe Total:   <h6 className="Summe" > </h6> € </h4>
     
     <h7>

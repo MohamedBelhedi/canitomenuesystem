@@ -33,8 +33,8 @@ function TellerGerichte() {
            
             CheckOutItem.innerText=val
             item1_ext.innerText=val
-           const name1_ex= name1.innerText=val+"€ "+" Adana Spieß"
-            item1.innerHTML=name1_ex
+           const name1_ex= name1.innerText=menueTeller[0].name
+            item1.textContent=name1_ex
             console.log(e.target.value)
             
             // versuchen wir es mit einem addEventListener
@@ -54,7 +54,7 @@ function TellerGerichte() {
        const item2=document.querySelector(".item2")
         const name2=document.querySelector("h5")
           console.log("hallo2")
-          name2.innerText=menueTeller[1].name
+          // name2.innerText=menueTeller[1].name
           const CheckOutItem=document.querySelector("h6")
           // gesamtbestellung aller Produkte
           const item2_ext=document.querySelector(".item2_ext")
@@ -64,7 +64,7 @@ function TellerGerichte() {
          
           CheckOutItem.innerText=val
           item2_ext.innerText=val
-       const name2_ex= name2.innerText=val+"€ "+" Iskander Kebab"
+       const name2_ex= name2.innerText=menueTeller[1].name
         item2.innerHTML=name2_ex
           console.log(e.target.value)
         }
@@ -83,18 +83,24 @@ function TellerGerichte() {
     kosten:15.00,
     onClick(e){
         
-      const item2=document.querySelector(".item3")
+      const item3=document.querySelector(".item3")
+      
     
       const name3=document.querySelector("h5")
         console.log("hallo3")
         
         const CheckOutItem=document.querySelector("h6")
+        const item3_ext=document.querySelector(".item3_ext")
+      
         const val=e.target.value
-        name3.innerText=menueTeller[2].name
+        item3_ext.innerText=val
+       
         
         
        
         CheckOutItem.innerText=val
+        const name3_ex= name3.innerText=menueTeller[2].name
+        item3.innerHTML=name3_ex
         console.log(e.target.value)
     } 
 

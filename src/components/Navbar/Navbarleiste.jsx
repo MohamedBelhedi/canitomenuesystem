@@ -8,9 +8,13 @@ function Navbarleiste({onBtnClick}) {
 
 const rmvClick=()=>{
   const removeTest=document.querySelector("h5")
+  
   const btnRmv=document.querySelector(".btnRmv")
   const test=document.querySelector(".test")
   const h6Summe=document.querySelector("h6")
+  const items_ext1=document.querySelector(".item_ext1")
+  const items_ext2=document.querySelector(".item_ext2")
+  const items_ext3=document.querySelector(".item_ext3")
 
 
   if(btnRmv){
@@ -18,6 +22,9 @@ const rmvClick=()=>{
     removeTest.remove(removeTest)
     test.style.background=""
     h6Summe.innerText=""
+    items_ext1.innerText=null
+    items_ext2.innerText=null
+    items_ext3.innerText=null
     
 
   }
@@ -56,7 +63,7 @@ const rmvClick=()=>{
 <span className="btnRmv" onClick={rmvClick}>{"warenkorb löschen".toLocaleUpperCase()}</span>
 <hr />
 <h5 className="item1" ></h5>
-<h5 className="item2"  ></h5>
+<h5 className="item2" ></h5>
 <h5 className="item3" ></h5>
 {/* <h5 className="name"></h5> */}
             <CartItem />
