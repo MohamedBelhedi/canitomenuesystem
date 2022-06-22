@@ -1,10 +1,24 @@
 import {Button,Card} from 'react-bootstrap'
 import React,{Component} from 'react'
 import '../App.css'
+
 import ButtonGrill from './Buttons/ButtonGrill'
+import Swal  from 'sweetalert2/dist/sweetalert2'
 
+const 
+alarm=()=>{
 
+  Swal.fire({
+
+    title: 'Achtung'+'❌',
+    text: 'Diese Seite ist im Aufbau und dient zu Testzwecken,bitte keine Daten Passwörter oder Sensible Daten eigeben Danke'+'😊',
+    timer: 10000
+
+  })
+
+}
 class Page extends Component {
+
     constructor(props){
         super(props)
 
@@ -25,6 +39,7 @@ class Page extends Component {
       window.location.assign("/suppen")
 
     }
+
     render(){
         const urlImag=[
         "https://images.pexels.com/photos/3220617/pexels-photo-3220617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -34,7 +49,7 @@ class Page extends Component {
 
         ]
   return (
-    <div ClassName="Items">
+    <div ClassName="Items" onChange={alarm()}>
 
 <Card  style={{ width: '18rem' }}>
    <Card.Img variant="top" src={urlImag[0]} />
